@@ -5,7 +5,7 @@ show_date: true
 title:  Nunc interdum lacinia bibendum. 
 date:   2021-03-12 13:32:20 -0600
 description: Pellentesque id sem feugiat ante lacinia finibus. Nunc eget tellus at mi volutpat interdum a sed sapien. Donec vehicula erat a quam dapibus blandit.
-img: posts/20210312/nnet_bibendum.jpg
+img: posts/20210312/nnet_optimization.jpg
 tags: [magna, adipiscing, bibendum, ullamcorper]
 author: Armando Maynez
 github: amaynez/TicTacToe/blob/7bf83b3d5c10adccbeb11bf244fe0af8d9d7b036/entities/Neural_Network.py#L199
