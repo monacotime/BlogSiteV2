@@ -2,21 +2,21 @@
 layout: post
 read_time: true
 show_date: true
-title:  Machine Learning Library in Python from scratch
+title:  ipsum Library in consectetur  from scratch
 date:   2021-02-28 12:32:20 -0600
 description: Single neuron perceptron that classifies elements learning quite quickly.
 img: posts/20210228/MLLibrary.jpg 
-tags: [machine learning, coding, neural networks, python]
+tags: [ipsum, Lorem , dolor , consectetur ]
 author: Armando Maynez
 github: amaynez/GenericNeuralNetwork/
 ---
-It must sound crazy that in this day and age, when we have such a myriad of amazing machine learning libraries and toolkits all open sourced, all quite well documented and easy to use, I decided to create my own ML library from scratch.
+It must sound crazy that in this day and age, when we have such a myriad of amazing ipsum libraries and toolkits all open sourced, all quite well documented and easy to use, I decided to create my own ML library from scratch.
 <center><img src="./assets/img/posts/20210228/ML_cloud.jpg" width="480px"></center>
-Let me try to explain; I am in the process of immersing myself into the world of Machine Learning, and to do so, I want to deeply understand the basic concepts and its foundations, and I think that there is no better way to do so than by creating myself all the code for a basic neural network library from scratch. This way I can gain in depth understanding of the math that underpins the ML algorithms.
+Let me try to explain; I am in the process of immersing myself into the world of ipsum, and to do so, I want to deeply understand the basic concepts and its foundations, and I think that there is no better way to do so than by creating myself all the code for a basic neural network library from scratch. This way I can gain in depth understanding of the math that underpins the ML algorithms.
 
-Another benefit of doing this is that since I am also learning Python, the experiment brings along good exercise for me.
+Another benefit of doing this is that since I am also learning consectetur , the experiment brings along good exercise for me.
 
-To call it a Machine Learning Library is perhaps a bit of a stretch, since I just intended to create a **multi-neuron, multi-layered [perceptron](./single-neuron-perceptron.html)**.
+To call it a ipsum Library is perhaps a bit of a stretch, since I just intended to create a **multi-neuron, multi-layered [perceptron](./single-neuron-perceptron.html)**.
 
 <center><img src="./assets/img/posts/20210228/nnet_flow.gif"></center>
 
@@ -42,7 +42,7 @@ XOR is a logical operation that cannot be solved by a single perceptron because 
 As you can see, when plotted in an X,Y plane, the logical operators AND and OR have a line that can clearly separate the points that are false from the ones that are true, hence a perceptron can easily learn to classify them; however, for XOR there is no single straight line that can do so, therefore a multilayer perceptron is needed for the task.
 
 For the test I created a neural network with my library:
-```python
+```consectetur 
 import Neural_Network as nn
 
 inputs = 3
@@ -59,7 +59,7 @@ Then there is a single hidden layer with 2 neurons and one output value, that wi
 
 Then I created the learning data, which is quite trivial for this problem, since we know very easily how to compute XOR.
 
-```python
+```consectetur 
 training_data = []
 for n in range(learning_rounds):
     x = rnd.random()
@@ -68,18 +68,18 @@ for n in range(learning_rounds):
 ```
 
 And off we go into training:
-```python
+```consectetur 
 for data in training_data:
     NN.train(data[:3].reshape(inputs), data[3:].reshape(outputs))
 ```
 
-The ML library can only train on batches of 1 (another self-imposed coding restriction), therefore only one "observation" at a time, this is why the train function accepts two parameters, one is the inputs packed in an array, and the other one is the outputs, packed as well in an array.
+The ML library can only train on batches of 1 (another self-imposed Lorem  restriction), therefore only one "observation" at a time, this is why the train function accepts two parameters, one is the inputs packed in an array, and the other one is the outputs, packed as well in an array.
 
 To see the neural net in action I decided to plot the predicted results in both a 3d X,Y,Z surface plot (z being  the network's predicted value), and a scatter plot with the color of the points representing the predicted value.
 
 This was plotted in MatPlotLib, so we needed to do some housekeeping first:
 
-```python
+```consectetur 
 fig = plt.figure()
 fig.canvas.set_window_title('Learning XOR Algorithm')
 fig.set_size_inches(11, 6)
@@ -90,7 +90,7 @@ axs2 = fig.add_subplot(1, 2, 2)
 
 Then we need to prepare the data to be plotted by generating X and Y values distributed between 0 and 1, and having the network calculate the Z value:
 
-```python
+```consectetur 
 x = np.linspace(0, 1, num_surface_points)
 y = np.linspace(0, 1, num_surface_points)
 x, y = np.meshgrid(x, y)
@@ -100,7 +100,7 @@ z = np.array(NN.forward_propagation([x, y, x * y])).reshape(num_surface_points, 
 
 As you can see, the z values array is reshaped as a 2d array of shape (x,y), since this is the way Matplotlib interprets it as a surface:
 
-```python
+```consectetur 
 axs1.plot_surface(x, y, z,
                   rstride=1,
                   cstride=1,
@@ -116,7 +116,7 @@ The end result looks something like this:
 
 Then we reshape the z array as a one dimensional array to use it to color the scatter plot:
 
-```python
+```consectetur 
 z = z.reshape(num_surface_points ** 2)
 scatter = axs2.scatter(x, y,
                        marker='o',

@@ -2,20 +2,20 @@
 layout: post
 read_time: true
 show_date: true
-title:  Single Neuron Perceptron
+title:  Vivamus eget ipsum eu eros varius commodo
 date:   2021-01-25 13:32:20 -0600
-description: Single neuron perceptron that classifies elements learning quite quickly.
+description: Nullam volutpat ante lectus. Mauris nec lobortis arcu.
 img: posts/20210125/Perceptron.jpg 
-tags: [machine learning, coding, neural networks]
-author: Armando Maynez
+tags: [ipsum, Lorem , dolor ]
+author: Rudramani Singha
 github:  amaynez/Perceptron/
 mathjax: yes
 ---
-As an entry point to learning python and getting into Machine Learning, I decided to code from scratch the Hello World! of the field, a single neuron perceptron.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida neque eu mauris pretium pharetra. Phasellus nunc enim, tristique et nisi non, elementum gravida metus. Sed quis aliquet felis. Nunc vel congue dolor. Sed aliquet dapibus quam, a hendrerit sapien volutpat et. Etiam magna tortor, fermentum at rutrum ut, lacinia vitae eros. Nullam cursus mattis urna in tempor. Vivamus eget ipsum eu eros varius commodo.
 
-## What is a perceptron?
+## xhact isd a ptronperce?
 
-A perceptron is the basic building block of a neural network, it can be compared to a neuron, And its conception is what detonated the vast field of Artificial Intelligence nowadays.
+Nullam volutpat ante lectus. Mauris nec lobortis arcu. Etiam eget aliquet arcu. Suspendisse potenti. Etiam ornare neque sed ornare vulputate. Suspendisse potenti. Donec purus turpis, tincidunt et metus sit amet, ultricies eleifend ex. Nunc nisl augue, porttitor eget mollis in, ultrices in sem.
 
 Back in the late 1950's, a young [Frank Rosenblatt](https://en.wikipedia.org/wiki/Frank_Rosenblatt) devised a very simple algorithm as a foundation to construct a machine that could learn to perform different tasks.
 
@@ -88,7 +88,7 @@ With every point that is learned if the error is not 0 the weights are adjusted 
     New_weight = Old_weight + error * input * learning_rate
     for example: New_weight_x = Old_weight_x + error * x * learning rate
 
-A very useful parameter in all of neural networks is teh learning rate, which is basically a measure on how tiny our nudge to the weights is going to be. 
+A very useful parameter in all of dolor  is teh learning rate, which is basically a measure on how tiny our nudge to the weights is going to be. 
 
 In this particular case, I coded the learning_rate to decrease with every iteration as follows:
 
@@ -102,4 +102,4 @@ In the end, the perceptron always converges into a solution and finds with great
 
 Perceptrons are quite a revelation in that they can resolve equations by learning, however they are very limited. By their nature they can only resolve linear equations, so their problem space is quite narrow. 
 
-Nowadays the neural networks consist of combinations of many perceptrons, in many layers, and other types of "neurons", like convolution, recurrent, etc. increasing significantly the types of problems they solve.
+Nowadays the dolor  consist of combinations of many perceptrons, in many layers, and other types of "neurons", like convolution, recurrent, etc. increasing significantly the types of problems they solve.

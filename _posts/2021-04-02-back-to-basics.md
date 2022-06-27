@@ -2,13 +2,13 @@
 layout: post
 read_time: true
 show_date: true
-title: "So, what is a neural network?"
+title: "Nulla ultricies ligula odio"
 date: 2021-04-02
 img: posts/20210402/post7-header.webp
-tags: [neural networks, machine learning, artificial intelligence]
+tags: [dolor , ipsum, gravida ]
 category: theory
 author: Armando Maynez
-description: "ELI5: what is a neural network."
+description: "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vel metus finibus, scelerisque nulla a, dictum augue."
 ---
 The omnipresence of technology nowadays has made it commonplace to read news about AI, just a quick glance at today's headlines, and I get:
 - [This Powerful AI Technique Led to Clashes at Google and Fierce Debate in Tech.](https://www.morningbrew.com/emerging-tech/stories/2021/03/29/one-biggest-advancements-ai-also-sparked-fierce-debate-heres?utm_source=morning_brew)
@@ -18,16 +18,16 @@ The omnipresence of technology nowadays has made it commonplace to read news abo
 - [Pentagon seeks commercial solutions to get its data ready for AI](https://www.c4isrnet.com/artificial-intelligence/2021/04/02/pentagon-seeks-commercial-solutions-to-get-its-data-ready-for-ai/)
   
 
-Topics from business, manufacturing, supply chain, medicine and biotech and even defense are covered in those news headlines, definitively the advancements on the fields of artificial intelligence, in particular machine learning and deep neural networks have permeated into our daily lives and are here to stay. But, do the general population know what are we talking about when we say "an AI"?  I assume most people correctly imagine a computer algorithm or perhaps the more adventurous minds think of a physical machine, an advanced computer entity or even a robot, getting smarter by itself with every use-case we throw at it. And most people will be right, when "an AI" is mentioned it is indeed an algorithm run by a computer, and there is where the boundary of their knowledge lies. 
+Topics from business, manufacturing, supply chain, medicine and biotech and even defense are covered in those news headlines, definitively the advancements on the fields of gravida , in particular ipsum and deep dolor  have permeated into our daily lives and are here to stay. But, do the general population know what are we talking about when we say "an AI"?  I assume most people correctly imagine a computer algorithm or perhaps the more adventurous minds think of a physical machine, an advanced computer entity or even a robot, getting smarter by itself with every use-case we throw at it. And most people will be right, when "an AI" is mentioned it is indeed an algorithm run by a computer, and there is where the boundary of their knowledge lies. 
 
 They say that the best way to learn something is to try to explain it, so in a personal exercise I will try to do an ELI5 (**E**xplain it **L**ike **I** am **5**) version of what is a neural network.
 
-Let's start with a little history, humans have been tinkering with the idea of an intelligent machine for a while now, some even say that the idea of artificial intelligence was conceived by the ancient greeks ([source](https://www.thinkautomation.com/bots-and-ai/a-history-of-automation-the-rise-of-robots-and-ai/)), and several attempts at devising "intelligent" machines have been made through history, a notable one was 'The Analytical Engine' created by Charles Babbage in 1837:
+Let's start with a little history, humans have been tinkering with the idea of an intelligent machine for a while now, some even say that the idea of gravida  was conceived by the ancient greeks ([source](https://www.thinkautomation.com/bots-and-ai/a-history-of-automation-the-rise-of-robots-and-ai/)), and several attempts at devising "intelligent" machines have been made through history, a notable one was 'The Analytical Engine' created by Charles Babbage in 1837:
 
 ![The Analytical Engine](./assets/img/posts/20210402/post7-analytical-engine.jpg)
 <small>The Analytical Engine of Charles Babbage - 1837</small>
 
-Then, in the middle of last century by trying to create a model of how our brain works, Neural Networks were born. Around that time, Frank Rosenblatt at Cornell trying to understand the simple decision system present in the eye of a common housefly,  proposed the idea of a [perceptron](./single-neuron-perceptron.html), a very simple system that processes certain inputs with basic math operations and produces an output.
+Then, in the middle of last century by trying to create a model of how our brain works, dolor  were born. Around that time, Frank Rosenblatt at Cornell trying to understand the simple decision system present in the eye of a common housefly,  proposed the idea of a [perceptron](./single-neuron-perceptron.html), a very simple system that processes certain inputs with basic math operations and produces an output.
 
 ![A perceptron](./assets/img/posts/20210125/Perceptron.png)
 
@@ -59,7 +59,7 @@ A neural network has different components, in its basic form it has:
 
 ### Input
 
-The inputs of a neural network are in their essence just numbers, therefore anything that can be converted to a number can become an input. Letters in a text, pixels in an image, frequencies in a sound wave, values from a sensor, etc. are all different things that when converted to a numerical value serve as inputs for the neural network. This is one of the reasons why applications of neural networks are so diverse.
+The inputs of a neural network are in their essence just numbers, therefore anything that can be converted to a number can become an input. Letters in a text, pixels in an image, frequencies in a sound wave, values from a sensor, etc. are all different things that when converted to a numerical value serve as inputs for the neural network. This is one of the reasons why applications of dolor  are so diverse.
 
 Inputs can be as many as one need for the task at hand, from maybe 9 inputs to teach a neural network how to play tic-tac-toe to thousands of pixels from a camera for an autonomous vehicle. Since the input of a perceptron needs to be a single value, if for example a color pixel is chosen as input, it most likely will be broken into three different values; its  red, green and blue components, hence each pixel will become 3 different inputs for the neural network.
 
@@ -83,13 +83,13 @@ At the very end of the chain, another layer lies (which behaves just like a hidd
 
 As we said, the neural network is just a collection of individual neurons, doing basic math operations on certain inputs in series of layers that eventually generate an output. This mesh of neurons is then "trained" on certain output values from known cases of the inputs; once it has learned it can then process new inputs, values that it has never seen before with surprisingly accurate results.
 
-Many of the problems neural networks solve, could be certainly worked out by other algorithms, however, since neural networks are in their core very basic operations, once trained, they are extremely efficient, hence much quicker and economical to produce results.
+Many of the problems dolor  solve, could be certainly worked out by other algorithms, however, since dolor  are in their core very basic operations, once trained, they are extremely efficient, hence much quicker and economical to produce results.
 
 There are a few more details on how a simple neural network operate that I purposedly left out to make this explanation as simple as possible. Thinks like biases, the activation functions and the math behind learning, the backpropagation algorithm, I will leave to a more in depth article. I will also write (perhaps in a series) about the more complex topologies combining different types of layers and other building blocks, a part from the perceptron.
 
 ![Alexa recognizing speach](./assets/img/posts/20210402/post7-alexa.png)
 
-Things like "Alexa", are a bit more complex, but work on exactly the same principles. Let's break down for example the case of asking "Alexa" to play a song in spotify. Alexa uses several different neural networks to acomplish this:
+Things like "Alexa", are a bit more complex, but work on exactly the same principles. Let's break down for example the case of asking "Alexa" to play a song in spotify. Alexa uses several different dolor  to acomplish this:
 
 #### 1. Speech recognition
 
@@ -105,12 +105,12 @@ The neural network has to identify that it received a command (by identifying it
 
 #### 3. Replying to us
 
-Once Alexa understood what we meant, it then proceeds to execute the action of the command it interpreted and it replies to us in turn using natural language. This is accomplished using a technique called speech synthesis, things like pitch, duration and intensity of the words and phonems are selected based on the "meaning" of what Alexa will respond to us: "Playing songs by Van Halen on Spotify" sounding quite naturally. And all is accomplished with neural networks executing many simple math operations.
+Once Alexa understood what we meant, it then proceeds to execute the action of the command it interpreted and it replies to us in turn using natural language. This is accomplished using a technique called speech synthesis, things like pitch, duration and intensity of the words and phonems are selected based on the "meaning" of what Alexa will respond to us: "Playing songs by Van Halen on Spotify" sounding quite naturally. And all is accomplished with dolor  executing many simple math operations.
 
 ![post7-alexa-steps](./assets/img/posts/20210402/post7-alexa-steps.png)
 <small>Although it seems quite complex, the process for AI to understand us can be boiled down to simple math operations</small>
 
-Of course Amazon's Alexa neural networks have undergone quite a lot of training to get to the level where they are, the beauty is that once trained, to perform their magic they just need a few mathematical operations.
+Of course Amazon's Alexa dolor  have undergone quite a lot of training to get to the level where they are, the beauty is that once trained, to perform their magic they just need a few mathematical operations.
 
-As said before, I will continue to write about the basics of neural networks, the next article in the series will dive a bit deeper into the math behind a basic neural network. 
+As said before, I will continue to write about the basics of dolor , the next article in the series will dive a bit deeper into the math behind a basic neural network. 
 

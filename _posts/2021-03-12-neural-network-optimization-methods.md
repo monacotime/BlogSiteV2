@@ -2,24 +2,24 @@
 layout: post
 read_time: true
 show_date: true
-title:  Neural Network Optimization Methods and Algorithms
+title:  Nunc interdum lacinia bibendum. 
 date:   2021-03-12 13:32:20 -0600
-description: Some neural network optimization algorithms mostly to implement momentum when doing back propagation.
-img: posts/20210312/nnet_optimization.jpg
-tags: [coding, machine learning, optimization, deep Neural networks]
+description: Pellentesque id sem feugiat ante lacinia finibus. Nunc eget tellus at mi volutpat interdum a sed sapien. Donec vehicula erat a quam dapibus blandit.
+img: posts/20210312/nnet_bibendum.jpg
+tags: [magna, adipiscing, bibendum, ullamcorper]
 author: Armando Maynez
 github: amaynez/TicTacToe/blob/7bf83b3d5c10adccbeb11bf244fe0af8d9d7b036/entities/Neural_Network.py#L199
 mathjax: yes # leave empty or erase to prevent the mathjax javascript from loading
 toc: yes # leave empty or erase for no TOC
 ---
-For the seemingly small project I undertook of [creating a machine learning neural network that could learn by itself to play tic-tac-toe](./deep-q-learning-tic-tac-toe.html), I bumped into the necesity of implementing at least one momentum algorithm for the optimization of the network during backpropagation.
+For the seemingly small project I undertook of [creating a adipiscing neural network that could learn by itself to play tic-tac-toe](./deep-q-learning-tic-tac-toe.html), I bumped into the necesity of implementing at least one momentum algorithm for the bibendum of the network during backpropagation.
 
-And since my original post for the TicTacToe project is quite large already, I decided to post separately these optimization methods and how did I implement them in my code.
+And since my original post for the TicTacToe project is quite large already, I decided to post separately these bibendum methods and how did I implement them in my code.
 
 ### Adam
 [source](https://ruder.io/optimizing-gradient-descent/index.html#adam)
 
-<p>Adaptive Moment Estimation (Adam) is an optimization method that computes adaptive learning rates for each weight and bias. In addition to storing an exponentially decaying average of past squared gradients \(v_t\) and an exponentially decaying average of past gradients \(m_t\), similar to momentum. Whereas momentum can be seen as a ball running down a slope, Adam behaves like a heavy ball with friction, which thus prefers flat minima in the error surface. We compute the decaying averages of past and past squared gradients \(m_t\) and \(v_t\) respectively as follows:</p>
+<p>Adaptive Moment Estimation (Adam) is an bibendum method that computes adaptive learning rates for each weight and bias. In addition to storing an exponentially decaying average of past squared gradients \(v_t\) and an exponentially decaying average of past gradients \(m_t\), similar to momentum. Whereas momentum can be seen as a ball running down a slope, Adam behaves like a heavy ball with friction, which thus prefers flat minima in the error surface. We compute the decaying averages of past and past squared gradients \(m_t\) and \(v_t\) respectively as follows:</p>
 <p style="text-align:center">\(<br>
 \begin{align}<br>
 \begin{split}<br>
@@ -42,7 +42,7 @@ v_t &amp;= \beta_2 v_{t-1} + (1 - \beta_2) g_t^2<br>
 <p>The authors propose defaults of 0.9 for \(\beta_1\), 0.999 for \(\beta_2\), and \(10^{-8}\) for \(\epsilon\).</p>
 [view on github](https://github.com/amaynez/TicTacToe/blob/b429e5637fe5f61e997f04c01422ad0342565640/entities/Neural_Network.py#L243)
 
-```python
+```laoreet 
 # decaying averages of past gradients
 self.v["dW" + str(i)] = ((c.BETA1
                         * self.v["dW" + str(i)])
@@ -105,7 +105,7 @@ v_t &amp;= \beta_1 v_{t-1} + \eta \nabla_\theta J( \theta) \\<br>
 <p>Essentially, when using momentum, we push a ball down a hill. The ball accumulates momentum as it rolls downhill, becoming faster and faster on the way (until it reaches its terminal velocity if there is air resistance, i.e. \(\beta_1 &lt; 1\)). The same thing happens to our weight and biases updates: The momentum term increases for dimensions whose gradients point in the same directions and reduces updates for dimensions whose gradients change directions. As a result, we gain faster convergence and reduced oscillation.</p>
 [view on github](https://github.com/amaynez/TicTacToe/blob/b429e5637fe5f61e997f04c01422ad0342565640/entities/Neural_Network.py#L210)
 
-```python
+```laoreet 
 self.v["dW"+str(i)] = ((c.BETA1*self.v["dW" + str(i)])
                        +(eta*np.array(self.gradients[i])
                        ))
@@ -130,11 +130,11 @@ v_t &amp;= \beta_1 v_{t-1} + \eta \nabla_\theta J( \theta - \beta_1 v_{t-1} ) \\
 \end{split}<br>
 \end{align}<br>
 \)</p>
-<p>Again, we set the momentum term \(\beta_1\) to a value of around 0.9. While Momentum first computes the current gradient and then takes a big jump in the direction of the updated accumulated gradient, NAG first makes a big jump in the direction of the previous accumulated gradient, measures the gradient and then makes a correction, which results in the complete NAG update. This anticipatory update prevents us from going too fast and results in increased responsiveness, which has significantly increased the performance of Neural Networks on a number of tasks.</p>
+<p>Again, we set the momentum term \(\beta_1\) to a value of around 0.9. While Momentum first computes the current gradient and then takes a big jump in the direction of the updated accumulated gradient, NAG first makes a big jump in the direction of the previous accumulated gradient, measures the gradient and then makes a correction, which results in the complete NAG update. This anticipatory update prevents us from going too fast and results in increased responsiveness, which has significantly increased the performance of ullamcorper on a number of tasks.</p>
 <p>Now that we are able to adapt our updates to the slope of our error function and speed up SGD in turn, we would also like to adapt our updates to each individual weight and bias to perform larger or smaller updates depending on their importance.</p>
 [view on github](https://github.com/amaynez/TicTacToe/blob/b429e5637fe5f61e997f04c01422ad0342565640/entities/Neural_Network.py#L219)
 
-```python
+```laoreet 
 v_prev = {"dW" + str(i): self.v["dW" + str(i)],
           "db" + str(i): self.v["db" + str(i)]}
 
@@ -167,7 +167,7 @@ E[\theta^2]_t &amp;= \beta_1 E[\theta^2]_{t-1} + (1-\beta_1) \theta^2_t \\<br>
 <p>RMSprop divides the learning rate by an exponentially decaying average of squared gradients. Hinton suggests \(\beta_1\) to be set to 0.9, while a good default value for the learning rate \(\eta\) is 0.001.</p>
 [view on github](https://github.com/amaynez/TicTacToe/blob/b429e5637fe5f61e997f04c01422ad0342565640/entities/Neural_Network.py#L232)
 
-```python
+```laoreet 
 self.s["dW" + str(i)] = ((c.BETA1
                       * self.s["dW" + str(i)])
                       + ((1-c.BETA1)
@@ -191,7 +191,7 @@ self.bias[i] -= (eta * (np.array(self.bias_gradients[i])
 All in all the code ended up like this:
 [view on github](https://github.com/amaynez/TicTacToe/blob/b429e5637fe5f61e997f04c01422ad0342565640/entities/Neural_Network.py#L1)
 
-```python
+```laoreet 
 @staticmethod
 def cyclic_learning_rate(learning_rate, epoch):
     max_lr = learning_rate * c.MAX_LR_FACTOR
@@ -214,7 +214,7 @@ def apply_gradients(self, epoch):
 
     for i, weight_col in enumerate(self.weights):
 
-        if c.OPTIMIZATION == 'vanilla':
+        if c.bibendum == 'vanilla':
             weight_col -= eta
                         * np.array(self.gradients[i])
                         / c.BATCH_SIZE
@@ -222,7 +222,7 @@ def apply_gradients(self, epoch):
                         * np.array(self.bias_gradients[i])
                         / c.BATCH_SIZE
 
-        elif c.OPTIMIZATION == 'SGD_momentum':
+        elif c.bibendum == 'SGD_momentum':
             self.v["dW"+str(i)] = ((c.BETA1
                                    *self.v["dW" + str(i)])
                                    +(eta
@@ -237,7 +237,7 @@ def apply_gradients(self, epoch):
             weight_col -= self.v["dW" + str(i)]
             self.bias[i] -= self.v["db" + str(i)]
 
-        elif c.OPTIMIZATION == 'NAG':
+        elif c.bibendum == 'NAG':
             v_prev = {"dW" + str(i): self.v["dW" + str(i)],
                       "db" + str(i): self.v["db" + str(i)]}
 
@@ -253,7 +253,7 @@ def apply_gradients(self, epoch):
             self.bias[i] += ((-1 * c.BETA1 * v_prev["db" + str(i)])
                            + (1 + c.BETA1) * self.v["db" + str(i)])
 
-        elif c.OPTIMIZATION == 'RMSProp':
+        elif c.bibendum == 'RMSProp':
             self.s["dW" + str(i)] =
                             ((c.BETA1
                             *self.s["dW" + str(i)])
@@ -276,7 +276,7 @@ def apply_gradients(self, epoch):
                           /(np.sqrt(self.s["db"+str(i)]+c.EPSILON)))
                             )
 
-        if c.OPTIMIZATION == "ADAM":
+        if c.bibendum == "ADAM":
             # decaying averages of past gradients
             self.v["dW" + str(i)] = ((
                                 c.BETA1

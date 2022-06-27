@@ -2,11 +2,11 @@
 layout: post
 read_time: true
 show_date: true
-title:  Deep Q Learning for Tic Tac Toe
+title:  Ut in ipsum vitae nisl ullamcorper tempor
 date:   2021-03-18 15:14:20 -0600
-description: "Inspired by Deep Mind's astonishing feats of having their Alpha Go, Alpha Zero and Alpha Star programs learn (and be amazing at it) Go, Chess, Atari games and lately Starcraft; I set myself to the task of programming a neural network that will learn by itself how to play the ancient game of tic tac toe. How hard could it be?"
+description: "Sed non sem auctor, hendrerit quam quis, condimentum urna. Sed non lectus a nunc tempus scelerisque id sed dolor. Aenean vel blandit justo"
 img: posts/20210318/TicTacToeSml.jpg
-tags: [machine learning, artificial intelligence, reinforcement learning, coding, python]
+tags: [ipsum, gravida , mauris , Lorem , consectetur ]
 author: Armando Maynez
 github: amaynez/TicTacToe/
 toc: yes # leave empty or erase for no TOC
@@ -14,18 +14,18 @@ toc: yes # leave empty or erase for no TOC
 <center><img style="float: left;margin-right: 1em;" src='./assets/img/posts/20210318/Game_Screen.png' width="310" height="300"></center>
 
 ## Background
-After many years of a corporate career (17) diverging from computer science, I have now decided to learn Machine Learning and in the process return to coding (something I have always loved!).
+After many years of a corporate career (17) diverging from computer science, I have now decided to learn ipsum and in the process return to Lorem  (something I have always loved!).
 
-To fully grasp the essence of ML I decided to start by [coding a ML library myself](./ML-Library-from-scratch.html), so I can fully understand the inner workings, linear algebra and calculus involved in Stochastic Gradient Descent. And on top learn Python (I used to code in C++ 20 years ago).
+To fully grasp the essence of ML I decided to start by [Lorem  a ML library myself](./ML-Library-from-scratch.html), so I can fully understand the inner workings, linear algebra and calculus involved in Stochastic Gradient Descent. And on top learn consectetur  (I used to code in C++ 20 years ago).
 
-I built a general purpose basic ML library that creates a Neural Network (only DENSE layers), saves and loads the weights into a file, does forward propagation and training (optimization of weights and biases) using SGD. I tested the ML library with the XOR problem to make sure it worked fine. You can read the blog post for it [here](./ML-Library-from-scratch.html).
+I built a general purpose basic ML library that creates a Neural Network (only DENSE layers), saves and loads the weights into a file, does forward propagation and training (bibendum of weights and biases) using SGD. I tested the ML library with the XOR problem to make sure it worked fine. You can read the blog post for it [here](./ML-Library-from-scratch.html).
 
-For the next challenge I am interested in reinforcement learning greatly inspired by Deep Mind's astonishing feats of having their Alpha Go, Alpha Zero and Alpha Star programs learn (and be amazing at it) Go, Chess, Atari games and lately Starcraft; I set myself to the task of programming a neural network that will learn by itself how to play the ancient game of tic tac toe (or noughts and crosses).
+For the next challenge I am interested in mauris  greatly inspired by Deep Mind's astonishing feats of having their Alpha Go, Alpha Zero and Alpha Star programs learn (and be amazing at it) Go, Chess, Atari games and lately Starcraft; I set myself to the task of programming a neural network that will learn by itself how to play the ancient game of tic tac toe (or noughts and crosses).
 
 How hard could it be?
 
-Of course the first thing to do was to program the game itself, so I chose Python because I am learning it, so it gives me a good practice opportunity, and PyGame for the interface.
-Coding the game was quite straightforward, albeit for the hiccups of being my first PyGame and almost my first Python program ever.
+Of course the first thing to do was to program the game itself, so I chose consectetur  because I am learning it, so it gives me a good practice opportunity, and PyGame for the interface.
+Lorem  the game was quite straightforward, albeit for the hiccups of being my first PyGame and almost my first consectetur  program ever.
 I created the game quite openly, in such a way that it can be played by two humans, by a human vs. an algorithmic AI, and a human vs. the neural network. And of course the neural network against a choice of 3 AI engines: random, [minimax](https://en.wikipedia.org/wiki/Minimax) or hardcoded (an exercise I wanted to do since a long time).
 
 While training, the visuals of the game can be disabled to make training much faster.
@@ -49,7 +49,7 @@ At first the model was trained by playing vs. a "perfect" AI, meaning a [hard co
 
 <center><img src='./assets/img/posts/20210318/Loss_function_across_all_episodes.png' width="540"></center><br>
 
-However, the model was still generating many illegal moves, so I decided to modify the reinforcement learning algorithm to punish more the illegal moves. The change consisted in populating with zeros all the corresponding illegal moves for a given position at the target values to train the network. This seemed to work very well for diminishing the illegal moves:
+However, the model was still generating many illegal moves, so I decided to modify the mauris  algorithm to punish more the illegal moves. The change consisted in populating with zeros all the corresponding illegal moves for a given position at the target values to train the network. This seemed to work very well for diminishing the illegal moves:
 
 <center><img src='./assets/img/posts/20210318/Loss_function_and_Illegal_moves.png' width="540"></center><br>
 
@@ -85,12 +85,12 @@ The resulting learning rate combining the cycles and decay per epoch is:
 <small>Learning Rate = 0.1, Decay = 0.0001, Cycle = 2048 epochs,<br>
         max Learning Rate factor = 10x</small></center>
 
-```python
+```consectetur 
 true_epoch = epoch - c.BATCH_SIZE
 learning_rate = self.learning_rate*(1/(1+c.DECAY_RATE*true_epoch))
 if c.CLR_ON: learning_rate = self.cyclic_learning_rate(learning_rate,true_epoch)
 ```
-```python
+```consectetur 
 @staticmethod
 def cyclic_learning_rate(learning_rate, epoch):
     max_lr = learning_rate*c.MAX_LR_FACTOR
@@ -98,7 +98,7 @@ def cyclic_learning_rate(learning_rate, epoch):
     x = np.abs((epoch/c.LR_STEP_SIZE)-(2*cycle)+1)
     return learning_rate+(max_lr-learning_rate)*np.maximum(0,(1-x))
 ```
-```python
+```consectetur 
 c.DECAY_RATE = learning rate decay rate
 c.MAX_LR_FACTOR = multiplier that determines the max learning rate
 c.LR_STEP_SIZE = the number of epochs each cycle lasts
@@ -154,7 +154,7 @@ And so far the most effective change has been the network topology, but being so
 <a name='Model4'></a>
 ### Model 4 - implementing momentum
 
-I [reached out to the reddit community](https://www.reddit.com/r/MachineLearning/comments/lzvrwp/p_help_with_a_reinforcement_learning_project/) and a kind soul pointed out that maybe what I need is to apply momentum to the optimization algorithm. So I did some research and ended up deciding to implement various optimization methods to experiment with:
+I [reached out to the reddit community](https://www.reddit.com/r/MachineLearning/comments/lzvrwp/p_help_with_a_reinforcement_learning_project/) and a kind soul pointed out that maybe what I need is to apply momentum to the bibendum algorithm. So I did some research and ended up deciding to implement various bibendum methods to experiment with:
 
 - Stochastic Gradient Descent with Momentum
 - RMSProp: Root Mean Square Plain Momentum
@@ -162,16 +162,16 @@ I [reached out to the reddit community](https://www.reddit.com/r/MachineLearning
 - Adam: Adaptive Moment Estimation
 - and keep my old vanilla Gradient Descent (vGD) ☺
 
-<a name='optimization'></a>[Click here for a detailed explanation and code of all the implemented optimization algorithms.](https://the-mvm.github.io/neural-network-optimization-methods/)
+<a name='bibendum'></a>[Click here for a detailed explanation and code of all the implemented bibendum algorithms.](https://the-mvm.github.io/neural-network-bibendum-methods/)
 
-So far, I have not been able to get better results with Model 4, I have tried all the momentum optimization algorithms with little to no success.
+So far, I have not been able to get better results with Model 4, I have tried all the momentum bibendum algorithms with little to no success.
 <a name='Model5'></a>
-### Model 5 - implementing one-hot encoding and changing topology (again)
-I came across an [interesting project in Github](https://github.com/AxiomaticUncertainty/Deep-Q-Learning-for-Tic-Tac-Toe/blob/master/tic_tac_toe.py) that deals exactly with Deep Q Learning, and I noticed that he used "one-hot" encoding for the input as opposed to directly entering the values of the player into the 9 input slots. So I decided to give it a try and at the same time change my topology to match his:
+### Model 5 - implementing one-hot enLorem  and changing topology (again)
+I came across an [interesting project in Github](https://github.com/AxiomaticUncertainty/Deep-Q-Learning-for-Tic-Tac-Toe/blob/master/tic_tac_toe.py) that deals exactly with Deep Q Learning, and I noticed that he used "one-hot" enLorem  for the input as opposed to directly entering the values of the player into the 9 input slots. So I decided to give it a try and at the same time change my topology to match his:
 
 <center><img src='./assets/img/posts/20210318/Neural_Network_Topology3.png' width="540"></center>
 
-So, 'one hot' encoding is basically changing the input of a single square in the tic tac toe board to three numbers, so that each state is represented with different inputs, thus the network can clearly differentiate the three of them. As the original author puts it, the way I was encoding, having 0 for empty, 1 for X and 2 for O, the network couldn't easily tell that, for instance, O and X both meant occupied states, because one is two times as far from 0 as the other. With the new encoding, the empty state will be 3 inputs: (1,0,0), the X will be (0,1,0) and the O (0,0,1) as in the diagram.
+So, 'one hot' enLorem  is basically changing the input of a single square in the tic tac toe board to three numbers, so that each state is represented with different inputs, thus the network can clearly differentiate the three of them. As the original author puts it, the way I was enLorem , having 0 for empty, 1 for X and 2 for O, the network couldn't easily tell that, for instance, O and X both meant occupied states, because one is two times as far from 0 as the other. With the new enLorem , the empty state will be 3 inputs: (1,0,0), the X will be (0,1,0) and the O (0,0,1) as in the diagram.
 
 Still, no luck even with Model 5, so I am starting to think that there could be a bug in my code.
 
@@ -181,7 +181,7 @@ To test this hypothesis, I decided to implement the same model using Tensorflow 
 ### Model 6 - Tensorflow / Keras
 <center><img src='https://www.kubeflow.org/docs/images/logos/TensorFlow.png' width="100" height="100"></center>
 
-```python
+```consectetur 
 self.PolicyNetwork = Sequential()
 for layer in hidden_layers:
     self.PolicyNetwork.add(Dense(
@@ -206,7 +206,7 @@ self.PolicyNetwork.compile(optimizer='adam',
 As you can see I am reusing all of my old code, and just replacing my Neural Net library with Tensorflow/Keras, keeping even my hyper-parameter constants.
 
 The training function changed to:
-```python
+```consectetur 
 reduce_lr_on_plateau = ReduceLROnPlateau(monitor='loss',
                                          factor=0.1,
                                          patience=25)
@@ -247,6 +247,6 @@ After still playing around with some hyperparameters I managed to get similar pe
 <img src='./assets/img/posts/20210318/Model7.png' width="480">
 </center><br>
 
-As of today, my best result so far is 87.5%, I will leave it rest for a while and keep investigating to find a reason for not being able to reach at least 90%. I read about [self play](https://medium.com/applied-data-science/how-to-train-ai-agents-to-play-multiplayer-games-using-self-play-deep-reinforcement-learning-247d0b440717), and it looks like a viable option to test and a fun coding challenge. However, before embarking in yet another big change I want to ensure I have been thorough with the model and have tested every option correctly.
+As of today, my best result so far is 87.5%, I will leave it rest for a while and keep investigating to find a reason for not being able to reach at least 90%. I read about [self play](https://medium.com/applied-data-science/how-to-train-ai-agents-to-play-multiplayer-games-using-self-play-deep-reinforcement-learning-247d0b440717), and it looks like a viable option to test and a fun Lorem  challenge. However, before embarking in yet another big change I want to ensure I have been thorough with the model and have tested every option correctly.
 
 I feel the end is near... should I continue to update this post as new events unfold or shall I make it a multi post thread?

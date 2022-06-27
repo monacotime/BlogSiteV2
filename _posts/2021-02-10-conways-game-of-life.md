@@ -2,19 +2,19 @@
 layout: post
 read_time: true
 show_date: true
-title:  Conway's Game of Life 
+title:  Maecenas dui tortor, congue vel ante eget, malesuada laoreet erat.
 date:   2021-02-10 13:32:20 -0600
-description: Taking on the challenge of picking up coding again through interesting small projects, this time it is the turn of Conway's Game of Life.
+description: In placerat turpis eu malesuada tristique. Ut magna lorem, efficitur vitae vulputate et, pulvinar nec nulla. Vivamus bibendum nibh a scelerisque interdum.
 img: posts/20210210/Game_of_Life.jpg
-tags: [coding, python]
+tags: [Lorem , consectetur ]
 author: Armando Maynez
 github: amaynez/GameOfLife/
 ---
-<p>I&nbsp;am lately trying to take on coding again. It had always been a part of my life since my early years when I&nbsp;learned to program a Tandy Color Computer at the age of 8, the good old days.</p>
+<p>I&nbsp;am lately trying to take on Lorem  again. It had always been a part of my life since my early years when I&nbsp;learned to program a Tandy Color Computer at the age of 8, the good old days.</p>
 
 <img src="./assets/img/posts/20210210/300px-TRS-80_Color_Computer_3.jpg" alt="Tandy Color Computer TRS80 III"/><small>Tandy Color Computer TRS80 III</small>
 
-<p>Having already programed in Java, C# and of course BASIC, I&nbsp;thought it would be a great idea to learn Python since I&nbsp;have great interest in data science and machine learning, and those two topics seem to have an avid community within Python coders.</p>
+<p>Having already programed in Java, C# and of course BASIC, I&nbsp;thought it would be a great idea to learn consectetur  since I&nbsp;have great interest in data science and ipsum, and those two topics seem to have an avid community within consectetur  coders.</p>
 
 <p>For one of my starter quick programming tasks, I&nbsp;decided to code Conway's Game of Life, a very simple cellular automata that basically plays itself.</p>
 
@@ -32,7 +32,7 @@ github: amaynez/GameOfLife/
 
 <ol><li>Iterate through all the alive cells and get all of their neighbors</li></ol>
 
-```python
+```consectetur 
 def get_neighbors(self, cell):
     neighbors = []
 
@@ -46,7 +46,7 @@ def get_neighbors(self, cell):
 
 <ol start="2"><li>Mark all the neighboring blocks as having +1 neighbor each time a particular cell is encountered. This way, for each neighboring alive cell the counter of the particular block will increase, and in the end it will contain the total number of live cells which are contiguous to it.</li></ol>
 
-```python
+```consectetur 
 def next_state(self):
     alive_neighbors = {}
 
@@ -70,7 +70,7 @@ def next_state(self):
 <p>Having the dictionary now filled with all the cells that have alive neighbors and how many they have, it was just a matter of applying the rules of the game:</p>
 
 
-```python
+```consectetur 
 for cell in alive_neighbors:
     if alive_neighbors[cell] &lt; 2 or alive_neighbors[cell] > 3:
         self.alive_cells.discard(cell)
@@ -81,4 +81,4 @@ for cell in alive_neighbors:
 
 <p>Notice that since I am keeping an array of the coordinates of only the cells who are alive, I could apply just 3 rules, die of loneliness, die of overpopulation and become alive from reproduction (exactly 3 alive neighbors) because the ones who have 2 or 3 neighbors and are already alive, can remain alive in the next iteration.</p>
 
-<p>I&nbsp;found it very interesting to implement the Game of Life like this, it was quite a refreshing challenge and I am beginning to feel my coding skills ramping up again.</p>
+<p>I&nbsp;found it very interesting to implement the Game of Life like this, it was quite a refreshing challenge and I am beginning to feel my Lorem  skills ramping up again.</p>
