@@ -33,11 +33,11 @@ about-author: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gra
 email: dummy@gmail.com # Add your Email address
 phone: 123456789 # Add your Phone number
 website: https://github.com/monacotime # Add your website
-# linkedin: monacotime # Add your Linkedin handle
-# github: monacotime # Add your Github handle
-# twitter: '@MvmThe' # Add your Twitter handle
-# bandcamp: armandomaynez # Add your Bandcamp username
-# stackoverflow: stackoverflow # Add your stackoverflow account
+linkedin: monacotime # Add your Linkedin handle
+github: monacotime # Add your Github handle
+twitter: '@MvmThe' # Add your Twitter handle
+bandcamp: armandomaynez # Add your Bandcamp username
+stackoverflow: stackoverflow # Add your stackoverflow account
 
 # Newsletter
 mailchimp: "https://github.us1.list-manage.com/subscribe/post?u=8ece198b3eb260e6838461a60&amp;id=397d90b5f4"
