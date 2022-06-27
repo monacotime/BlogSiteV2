@@ -1,5 +1,12 @@
 
 @charset "utf-8";
+
+/* Personal Customization spacing front page */
+
+.post-card-box li {
+  padding: 5px;
+}
+
 /* Main Color palette and fonts */
 
 html {
