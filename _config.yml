@@ -1,6 +1,6 @@
 # Site settings
 title: Virtual Branding
-description: 'Moshin's Website' # this means to ignore newlines until "baseurl:"
+description: 'Moshin Website' # this means to ignore newlines until "baseurl:"
 permalink: ':title:output_ext'
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://monacotime.github.io/BlogSiteV2/" # the base hostname & protocol for your site, e.g. http://example.com
